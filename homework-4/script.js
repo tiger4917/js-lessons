@@ -127,3 +127,44 @@ function cubOfElement(array) {
     }
     return array;
 }
+
+/*===============задание 5==============*/
+
+// Дан массив const arr = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3];
+// Подсчитайте количество цифр 3 в этом массиве.
+
+const newArr = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3];
+console.log(`Исходный массив: ${newArr}`);
+console.log(`Количество цифер 3 в этом массиве :  ${countOfThree(newArr)}`);
+
+function countOfThree(newArr2) {
+    let count = 0;     //[1,3,3]
+    for (let i = 0; i< newArr2.length; i++) {
+        if (newArr2[i] === 3){
+            count ++;
+        }
+    }
+    return count;
+}
+
+/*===============задание 6==============*/
+
+// Дан следующий массив:
+// [1, 2, 3, 4, 5]
+// С помощью метода массива преобразуйте его в следующий:
+// [1, 4, 5]
+
+const arrayOfNumbers = [1, 2, 3, 4, 5];
+console.log(`Данный массив : ${arrayOfNumbers}`);
+console.log(`Итоговый массив ${changeArray(arrayOfNumbers)}`);
+
+
+function changeArray(array) {
+    const newResultArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] !== 2 && array[i] !== 3) {
+            newResultArray.push(array[i]);
+        }
+    }
+    return newResultArray;
+}
